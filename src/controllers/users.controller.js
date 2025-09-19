@@ -6,7 +6,10 @@ import {
   deleteUser,
 } from '#services/users.service.js';
 import { formatValidationError } from '#utils/format.js';
-import { userIdSchema, updateUserSchema } from '#validations/users.validation.js';
+import {
+  userIdSchema,
+  updateUserSchema,
+} from '#validations/users.validation.js';
 
 export const getAllUsersController = async (req, res, next) => {
   try {

@@ -1,9 +1,9 @@
-
 # Dockerized Application with Neon Database
 
 This project demonstrates how to dockerize a Node.js application using Neon Database, with separate configurations for development and production environments.
 
 ## Table of Contents
+
 - [Development Setup (Neon Local)](#development-setup-neon-local)
 - [Production Setup (Neon Cloud)](#production-setup-neon-cloud)
 
@@ -12,6 +12,7 @@ This project demonstrates how to dockerize a Node.js application using Neon Data
 For local development, the application is configured to use **Neon Local**, which runs a PostgreSQL proxy in a Docker container alongside your application. This allows for automatic creation of ephemeral branches for development and testing.
 
 ### Prerequisites
+
 - Docker and Docker Compose installed.
 
 ### 1. Configure Environment Variables
@@ -33,6 +34,7 @@ docker compose -f docker-compose.dev.yml up --build
 ```
 
 This command will:
+
 - Build your application's Docker image.
 - Start the `neon-local` service, which acts as a local PostgreSQL proxy.
 - Start your application, connecting to `neon-local`.
@@ -44,6 +46,7 @@ Your application will be accessible at `http://localhost:8080`.
 For the production environment, the application connects directly to a **Neon Cloud Database** instance. Neon Local is not used in production.
 
 ### Prerequisites
+
 - A Neon Cloud account and a provisioned database.
 - Docker and Docker Compose installed.
 
@@ -66,6 +69,6 @@ docker compose -f docker-compose.prod.yml up --build
 ```
 
 This command will:
+
 - Build your application's Docker image.
 - Start your application, connecting to your Neon Cloud database using the `DATABASE_URL` from `production.env`.
-
