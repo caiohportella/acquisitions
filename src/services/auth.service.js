@@ -1,5 +1,5 @@
 import logger from '#config/logger.js';
-import * as bcrypt from 'bcrypt';
+import bcrypt from 'bcrypt';
 import { eq } from 'drizzle-orm';
 import { db } from '#config/database.js';
 import { users } from '#models/user.model.js';
